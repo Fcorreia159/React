@@ -21,17 +21,20 @@
 }
 
 
-Button.cadastrar{
-    margin-left: 4rem;
-    margin-top: 2rem;
-}
 
-Button.entrar{
-    margin-top: 2rem;
-}
+
 
 label{
     font-size: large;
     margin-right: 10px;
+    
+}
+
+
+section.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
     
 }

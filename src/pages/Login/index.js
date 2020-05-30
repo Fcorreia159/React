@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
 
@@ -20,11 +21,12 @@ export default function login() {
                     <label>Senha: </label>
                     <Input inputProps={{ 'aria-label': 'description' }} />
                 </form>
-               
-                
-                <Button className="entrar" type="submit" variant="contained">Entrar</Button>
-                <Button className="cadastrar" variant="contained">Cadastrar</Button>
-                
+
+                <section className="buttons">
+                    <Button className="entrar" type="submit" variant="contained">Entrar</Button>
+                    <Button className="cadastrar" variant="contained" href="/cadastro">Cadastrar</Button>
+                </section>  
+
             </section>
 
 
