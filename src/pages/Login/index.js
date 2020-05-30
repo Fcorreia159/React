@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css';
-
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 
 
 
@@ -11,11 +12,19 @@ export default function login() {
         <div className="login-container">
             <section className="form">
                 <img src={img} alt="daaoi" />
-                <h1>Login:</h1> 
-                <input />
-                <h1>Senha:</h1>
-                <input />
-                <button type="submit">Entrar</button>
+                <form className="login">
+                    <label>Login: </label>
+                    <Input inputProps={{ 'aria-label': 'description' }} />
+                </form>
+                <form className="senha">
+                    <label>Senha: </label>
+                    <Input inputProps={{ 'aria-label': 'description' }} />
+                </form>
+               
+                
+                <Button className="entrar" type="submit" variant="contained">Entrar</Button>
+                <Button className="cadastrar" variant="contained">Cadastrar</Button>
+                
             </section>
 
 
