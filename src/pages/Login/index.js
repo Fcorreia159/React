@@ -23,7 +23,7 @@ export default function login() {
                 </form>
 
                 <section className="buttons">
-                    <Button className="entrar" type="submit" variant="contained">Entrar</Button>
+                    <Button className="entrar" type="submit" variant="contained" href="/profile">Entrar</Button>
                     <Button className="cadastrar" variant="contained" href="/cadastro">Cadastrar</Button>
                 </section>  
 

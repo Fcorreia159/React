@@ -28,7 +28,7 @@ export default function Cadastro() {
                         <TextField id="filled-basic" label="Senha" variant="filled" style={{ width: 500 }} />
 
                         <section className="buttons">
-                            <Button className="cadastrar" type="submit" variant="contained">Cadastrar</Button>
+                            <Button className="cadastrar" type="submit" variant="contained" href="/" >Enviar</Button>
                             <Button className="voltar" variant="contained" href="/">Voltar</Button>
                         </section>
 

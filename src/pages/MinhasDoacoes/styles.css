@@ -1,0 +1,51 @@
+
+
+
+.doacoes-container h1{
+    margin-top: 80px;
+    margin-bottom: 24px;
+    margin-left: 10px;
+    
+}
+
+.doacoes-container ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+
+
+.doacoes-container ul li{
+    background: #FFF;
+    padding: 24px;
+    border-radius: 8px;
+    position: relative;
+    size: 20px;
+    
+    
+
+}
+
+.doacoes-container ul li Button{
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+.doacoes-container ul li strong{
+    display: block;
+    margin-bottom: 16px;
+    color: #41414d;
+
+
+}
+
+.doacoes-container ul li p + strong{
+    margin-top: 32px;
+}
