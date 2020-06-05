@@ -13,8 +13,6 @@ export default function Informacoes() {
                 <Barra />
             </header>
 
-
-
             <div className="informacoes-container">
                 <h1>Mais informações</h1>
                 <div className="content">

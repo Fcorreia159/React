@@ -6,6 +6,39 @@ import './styles.css';
 import Barra from '../../Toolbar';
 
 export default function Profile() {
+
+    // const [doacoes, setDoacoes] = useState('');
+
+    // async function loadList () {
+    //     return (
+    //         <FlatList
+    //           data={this.state.doacoes}
+    //           keyExtractor={item => item.id.toString()}
+    //           renderItem={({ item }) => (
+    //             <TouchableOpacity key={item.id} onPress={() => this.navigateToDetail(item)}>
+    //                 <ListaDoacao doacao={item}/>
+    //             </TouchableOpacity>
+    //           )}
+    //           style={styles.container}
+    //         />
+    //     )
+    // }
+
+    //trocar_ini
+    //   componentDidMount() {
+    //     this.setState({ isRequesting: true });
+    
+    //     api.get('/doacao/pendentes')
+    //       .then((response) => response.data)
+    //       .then((data) => this.setState({ doacoes: data }))
+    //       .then(() => this.setState({ isRequesting: false }));
+    //   }
+    
+    //   navigateToDetail = function (doacao) {
+    //     this.props.navigation.navigate('DetalheDoacao', { doacao });
+    //   }
+    //trocar_fim
+    
     return (
         <div className="profile-container">
             <header>

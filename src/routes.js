@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Login from './pages/Login';
-import Cadastro from './pages/Cadastro';
+import Cadastro from './pages/cadastro';
 import Profile from './pages/Profile';
 import MinhasDoacoes from './pages/MinhasDoacoes';
 import Informacoes from './pages/Informacoes';

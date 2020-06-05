@@ -7,6 +7,25 @@ import Barra from '../../Toolbar';
 
 
 export default function MinhasDoacoes() {
+
+    // const [doacoes, setDoacoes] = useState('');
+
+    //trocar_ini
+    // componentDidMount() {
+    //     this.setState({ isRequesting: true });
+    
+    //     AsyncStorage.getItem('doador')
+    //       .then((doador) => api.get(`doacao/?doadorId=${doador}`))
+    //       .then((response) => response.data)
+    //       .then((data) => this.setState({ doacoes: data }))
+    //       .then(() => this.setState({ isRequesting: false }));
+    // }
+    
+    // navigateToDetail = function (doacao) {
+    //     this.props.navigation.navigate('DetalheDoacao', { doacao });
+    // }
+    //trocar_fim
+
     return (
         <div className="doacoes-container">
             <header>
