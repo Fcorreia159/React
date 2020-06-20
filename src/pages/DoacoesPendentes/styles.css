@@ -8,15 +8,27 @@
     
 }
 
+.lista{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px; 
+    margin-bottom: 20px;
+    margin-top: 50px;
+    
+}
+
 .profile-container ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 24px;
     list-style: none;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 20px; 
     margin-bottom: 20px;
-    
+    margin-top: 50px;
     
 }
 

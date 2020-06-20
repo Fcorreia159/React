@@ -1,30 +1,38 @@
-import React from 'react';
-
-import Button from '@material-ui/core/Button';
-
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import api from '../../service/api';
 import './styles.css';
 import Barra from '../../Toolbar';
 
-
 export default function MinhasDoacoes() {
+    const history = useHistory();
+    const [doacoes, setDoacoes] = useState('');
+    const doador = localStorage.getItem('doador');
 
-    // const [doacoes, setDoacoes] = useState('');
+    useEffect(() => {
+        api.get(`doacao/?doadorId=${doador}`, {
+        }).then(response => {
+            setDoacoes(response.data);
+        })
+    }, [doador]);
 
-    //trocar_ini
-    // componentDidMount() {
-    //     this.setState({ isRequesting: true });
-    
-    //     AsyncStorage.getItem('doador')
-    //       .then((doador) => api.get(`doacao/?doadorId=${doador}`))
-    //       .then((response) => response.data)
-    //       .then((data) => this.setState({ doacoes: data }))
-    //       .then(() => this.setState({ isRequesting: false }));
-    // }
-    
-    // navigateToDetail = function (doacao) {
-    //     this.props.navigation.navigate('DetalheDoacao', { doacao });
-    // }
-    //trocar_fim
+    function showInfo() {
+        return (
+            <ul>
+                {doacoes?.map(doacao => (
+                    <li key={doacao.crianca.id}>
+                        <strong>Nome</strong>
+                        <p>{doacao.crianca.nome}</p>
+                        <strong>Idade</strong>
+                        <p>{doacao.crianca.idade}</p>
+                        <strong>Bairro</strong>
+                        <p>{doacao.crianca.bairro}</p>
+                    </li>
+                ))}
+
+            </ul>
+        );
+    }
 
     return (
         <div className="doacoes-container">
@@ -34,108 +42,7 @@ export default function MinhasDoacoes() {
 
             <h1>Minhas Doações</h1>
 
-            <ul>
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-
-                <li>
-                    <strong>Nome</strong>
-                    <p>nome teste</p>
-                    <strong>Idade</strong>
-                    <p>idade teste</p>
-                    <strong>Bairro</strong>
-                    <p>bairro teste</p>
-                    
-                </li>
-            </ul>
-
+            { !!doacoes && showInfo() }
 
         </div>
     );
