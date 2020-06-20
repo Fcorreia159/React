@@ -2,7 +2,7 @@
 
 .login-container{
     width: 100%;
-    max-width: 1120px;
+    max-width: 500px;
     height: 100vh;
     margin: 0 auto;
 
@@ -12,6 +12,15 @@
     justify-content: center;
 }
 
+.login-container .form{
+    width: 100%;
+    padding: 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    
+}
 
 .login{
     margin-top: 50px;

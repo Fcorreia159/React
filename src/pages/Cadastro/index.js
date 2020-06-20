@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import Input from '@material-ui/core/Input';
+import Button from '@material-ui/core/Button';
 import { useHistory } from "react-router-dom";
 import { validate as validateCPF } from 'gerador-validador-cpf';
 import api from '../../service/api';
+import img from '../../assets/unnamed.png';
 
 import './styles.css'
 
@@ -47,25 +50,43 @@ export default function Cadastro() {
         <div className="cadastro-container">
 
             <div className="content">
-                <section>
+                <section className ="fild">
 
-                    <label className="titulo">Cadastro</label>
+                    
+                    <img src={img} alt="doaai" className ="img"/>
                     <form onSubmit={handleRegister}>
-                        <input placeholder="Nome" value={nome} onChange={event => setNome(event.target.value)} />
+                        <div>
+                            <label >Nome: </label>
+                            <Input className="Nome" value={nome} onChange={event => setNome(event.target.value)} />
+                        </div>
+                        <div>
+                            <label >Cpf: </label>
+                            <Input className="Cpf" value={cpf} onChange={event => setCpf(event.target.value)} />
+                        </div>
 
-                        <input placeholder="Cpf" value={cpf} onChange={event => setCpf(event.target.value)} />
+                        <div>
+                        <label >Email: </label>
+                        <Input className="Email" type="email"  value={email} onChange={event => setEmail(event.target.value)} />
+                        </div>
 
-                        <input type="email" placeholder="E-mail" value={email} onChange={event => setEmail(event.target.value)} />
+                        <div>
+                        <label >Bairro: </label>
+                        <Input className="Bairro" value={bairro} onChange={event => setBairro(event.target.value)} />
+                        </div>
 
-                        <input placeholder="Bairro" value={bairro} onChange={event => setBairro(event.target.value)} />
+                        <div>
+                        <label >Login: </label>
+                        <Input className="Login" value={login} onChange={event => setLogin(event.target.value)} />
+                        </div>
 
-                        <input placeholder="Login" value={login} onChange={event => setLogin(event.target.value)} />
-
-                        <input type="password" placeholder="Senha" value={senha} onChange={event => setSenha(event.target.value)} />
+                        <div>
+                        <label >Senha: </label>
+                        <Input className="Senha" type="password"  value={senha} onChange={event => setSenha(event.target.value)} />
+                        </div>
 
                         <section className="buttons">
-                            <button className="cadastrar" type="submit">Cadastrar</button>
-                            <button className="voltar" to="/">Voltar</button>
+                            <Button className="cadastrar" type="submit" variant="contained">Cadastrar</Button>
+                            <Button className="voltar" href="/" variant="contained">Voltar</Button>
                         </section>
 
                     </form>

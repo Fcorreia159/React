@@ -1,6 +1,6 @@
 .cadastro-container{
     width: 100%;
-    max-width: 700px;
+    max-width: 500px;
     height: 100vh;
     margin: 0 auto;
 
@@ -23,10 +23,38 @@
 
 }
 
-cadastro-container .content .form .TextField{
-    justify-content: space-between;
+.img{
+    margin-left: 10px;
 }
 
+.Nome{
+    margin-top: 50px;
+    margin-left: 3px;
+}
+
+.Cpf{
+    margin-top: 10px;
+    margin-left: 23px;
+}
+
+.Email{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.Bairro{
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+.Login{
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.Senha{
+    margin-top: 10px;
+}
 label.titulo{
     font-size: xx-large;
     margin-left: 11rem;
