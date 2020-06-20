@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import api from '../../service/api';
 import './styles.css';
+import Button from '@material-ui/core/Button';
 import Barra from '../../Toolbar';
 
 export default function DoacoesPendentes() {
@@ -32,7 +33,7 @@ export default function DoacoesPendentes() {
     }
 
     return (
-        <div className="doacoespendentes-container">
+        <div className="profile-container">
             <header>
                 <Barra />
             </header>
@@ -51,7 +52,7 @@ export default function DoacoesPendentes() {
                         <strong>Bairro</strong>
                         <p>{doacao.crianca.bairro}</p>
 
-                        <button onClick={() => handleDetail(doacao)} type="button" >Doar</button>
+                        <Button onClick={() => handleDetail(doacao)} type="button" variant="contained">Doar</Button>
                     </li>
                 ))}
             </ul>
