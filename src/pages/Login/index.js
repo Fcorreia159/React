@@ -25,7 +25,7 @@ export default function Login() {
 
     try {
       api.post('/login/', { login, senha })
-        .then(response => { console.log (response) ; return response.data})
+        .then(response => { console.log(response); return response.data })
         .then(doadorId => {
           localStorage.setItem('doador', doadorId)
           history.push('/doacoespendentes');
@@ -42,14 +42,16 @@ export default function Login() {
       <section className="form">
         <img src={img} alt="doaai" />
 
-        <label className="titulo">Login</label>
+        
         <form onSubmit={handleLogin}>
-          <label>Login: </label>
-          <Input inputProps={{ 'aria-label': 'description' }} value={login} onChange={e => setLogin(e.target.value)} />
-
-          <label>Senha: </label>
-          <Input inputProps={{ 'aria-label': 'description' }} type="password" value={senha} onChange={e => setSenha(e.target.value)} />
-
+          <div>
+            <label >Login: </label>
+            <Input className="login" inputProps={{ 'aria-label': 'description' }} value={login} onChange={e => setLogin(e.target.value)} />
+          </div>
+          <div>
+            <label>Senha: </label>
+            <Input className="senha" inputProps={{ 'aria-label': 'description' }} type="password" value={senha} onChange={e => setSenha(e.target.value)} />
+          </div>
           <section className="buttons">
             <Button className="entrar" type="submit" variant="contained" >Entrar</Button>
             <Button className="cadastrar" variant="contained" href="/cadastro">Cadastrar</Button>
