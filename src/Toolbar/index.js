@@ -7,24 +7,24 @@ import './styles.css'
 
 
 
-export default function Barra(){
+export default function Barra() {
 
     const history = useHistory();
 
     function handleLogout() {
         localStorage.clear();
-    
+
         history.push('/');
     }
 
-    return(
+    return (
         <AppBar>
-                    <Toolbar className="toolbar">
-                        <Button color="inherit" href="/doacoespendentes" >Doações Pendentes</Button>
-                        <Button color="inherit" href="/minhasdoacoes" >Minhas Doações</Button>
-                        <Button color="inherit" href="/informacoes">Mais Informações</Button>
-                        <Button color="inherit" onClick={handleLogout}>Sair</Button>
-                    </Toolbar>
-                </AppBar>
+            <Toolbar className="toolbar">
+                <Button color="inherit" href="/doacoespendentes" >Doações Pendentes</Button>
+                <Button color="inherit" href="/minhasdoacoes" >Minhas Doações</Button>
+                <Button color="inherit" href="/informacoes">Mais Informações</Button>
+                <Button color="inherit" onClick={handleLogout}>Sair</Button>
+            </Toolbar>
+        </AppBar>
     );
 }
