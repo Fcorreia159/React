@@ -37,7 +37,7 @@ export default function Cadastro() {
         }
 
         try {
-            await api.put('/signup', data)
+            await api.post('/signup', data)
             alert('Cadastro realizado');
             history.push('/');
         } catch (err) {
